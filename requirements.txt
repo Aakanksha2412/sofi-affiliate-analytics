@@ -1,0 +1,7 @@
+apache-airflow
+pandas
+snowflake-connector-python
+tableauserverclient
+flask
+pytest
+scipy
