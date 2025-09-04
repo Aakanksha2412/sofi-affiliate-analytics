@@ -52,3 +52,25 @@ docker-compose up --build
 
 This will automatically provision a PostgreSQL instance and run the ETL pipeline.
 
+🔹 Option 2: Local Environment Setup
+
+``` bash
+# Clone the repository
+git clone https://github.com/Aakanksha2412/sofi-affiliate-analytics.git
+cd sofi-affiliate-analytics
+
+# (Optional) Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+```
+➡️ Setup Database
+
+``` bash
+# Create tables using schema
+psql -U <db_user> -d <db_name> -f create_tables.sql
+
+```
