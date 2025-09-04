@@ -26,9 +26,29 @@ sofi-affiliate-analytics/
 ├── run_etl_standalone.py     # Local standalone ETL version
 ├── tableau_dashboard/        # Tableau workbook and packaged files (.twb/.twbx)
 └── README.md                 # Project documentation
+```
+---
 
 ## 🛠️ Requirements
 - Python 3.8+
 - Docker & Docker Compose
 - PostgreSQL (if running outside Docker)
 - Tableau Desktop or Tableau Public
+
+---
+
+## ⚙️ Setup & Installation
+ 🔹 Option 1: Run with Docker (Recommended)
+ 
+``` bash
+# Clone the repository
+git clone https://github.com/Aakanksha2412/sofi-affiliate-analytics.git
+cd sofi-affiliate-analytics
+
+# Build and start services
+docker-compose up --build
+
+```
+
+This will automatically provision a PostgreSQL instance and run the ETL pipeline.
+
