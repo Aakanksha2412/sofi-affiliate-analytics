@@ -27,3 +27,8 @@ sofi-affiliate-analytics/
 ├── tableau_dashboard/        # Tableau workbook and packaged files (.twb/.twbx)
 └── README.md                 # Project documentation
 
+## 🛠️ Requirements
+- Python 3.8+
+- Docker & Docker Compose
+- PostgreSQL (if running outside Docker)
+- Tableau Desktop or Tableau Public
