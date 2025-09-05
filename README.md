@@ -110,22 +110,22 @@ setx DB_NAME "sofi_affiliate"
 ---
 ## 📊 Workflow
 
--Extract – Ingest affiliate data from sources (CSV, APIs, or files).
--Transform – Clean, validate, and standardize data.
--Load – Insert processed data into PostgreSQL tables.
--Visualize – Connect Tableau to the database and explore insights through dashboards.
+- Extract – Ingest affiliate data from sources (CSV, APIs, or files).
+- Transform – Clean, validate, and standardize data.
+- Load – Insert processed data into PostgreSQL tables.
+- Visualize – Connect Tableau to the database and explore insights through dashboards.
 
 ---
 
 ## 📈 Tableau Dashboard
 
--Located in the tableau_dashboard/ folder (.twb or .twbx files).
--Connects directly to the processed PostgreSQL database.
--Provides insights such as:
-   -Affiliate channel performance
-   -Cost-per-acquisition (CPA) trends
-   -ROI and conversion funnel efficiency
-   -Time-based traffic and conversion patterns
+- Located in the tableau_dashboard/ folder (.twb or .twbx files).
+- Connects directly to the processed PostgreSQL database.
+- Provides insights such as:
+   - Affiliate channel performance
+   - Cost-per-acquisition (CPA) trends
+   - ROI and conversion funnel efficiency
+   - Time-based traffic and conversion patterns
 
 👉 If you’re using Tableau Public, you can publish dashboards and share interactive links.
 
@@ -133,12 +133,12 @@ setx DB_NAME "sofi_affiliate"
 
 ## 🛣️ Roadmap / Future Enhancements
 
--✅ Initial ETL pipeline
--✅ Tableau dashboard integration
--🔲 Automated unit tests for data validation
--🔲 Enhanced dashboard with predictive metrics
--🔲 CI/CD for automated deployments
--🔲 Cloud deployment support (AWS/GCP/Azure)
+- ✅ Initial ETL pipeline
+- ✅ Tableau dashboard integration
+- 🔲 Automated unit tests for data validation
+- 🔲 Enhanced dashboard with predictive metrics
+- 🔲 CI/CD for automated deployments
+- 🔲 Cloud deployment support (AWS/GCP/Azure)
 
 ---
 
