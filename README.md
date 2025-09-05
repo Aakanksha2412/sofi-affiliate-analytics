@@ -38,7 +38,7 @@ sofi-affiliate-analytics/
 ---
 
 ## ⚙️ Setup & Installation
- 🔹 Option 1: Run with Docker (Recommended)
+ **🔹 Option 1: Run with Docker (Recommended)**
  
 ``` bash
 # Clone the repository
@@ -52,7 +52,7 @@ docker-compose up --build
 
 This will automatically provision a PostgreSQL instance and run the ETL pipeline.
 
-🔹 Option 2: Local Environment Setup
+**🔹 Option 2: Local Environment Setup**
 
 ``` bash
 # Clone the repository
@@ -67,10 +67,87 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 ```
-➡️ Setup Database
+**➡️ Setup Database**
 
 ``` bash
 # Create tables using schema
 psql -U <db_user> -d <db_name> -f create_tables.sql
 
 ```
+**➡️ Run ETL**
+
+``` bash
+# Using the main ETL script
+python run_etl.py
+
+# Or run standalone script without Docker
+python run_etl_standalone.py
+
+```
+
+## 🔧 Configuration
+Set up environment variables for database connection:
+
+``` bash
+export DB_HOST=localhost
+export DB_PORT=5432
+export DB_USER=your_user
+export DB_PASSWORD=your_password
+export DB_NAME=sofi_affiliate
+
+```
+
+For Windows (PowerShell):
+
+``` bash
+setx DB_HOST "localhost"
+setx DB_PORT "5432"
+setx DB_USER "your_user"
+setx DB_PASSWORD "your_password"
+setx DB_NAME "sofi_affiliate"
+
+```
+---
+## 📊 Workflow
+
+Extract – Ingest affiliate data from sources (CSV, APIs, or files).
+Transform – Clean, validate, and standardize data.
+Load – Insert processed data into PostgreSQL tables.
+Visualize – Connect Tableau to the database and explore insights through dashboards.
+
+---
+
+## 📈 Tableau Dashboard
+
+Located in the tableau_dashboard/ folder (.twb or .twbx files).
+Connects directly to the processed PostgreSQL database.
+Provides insights such as:
+Affiliate channel performance
+Cost-per-acquisition (CPA) trends
+ROI and conversion funnel efficiency
+Time-based traffic and conversion patterns
+
+👉 If you’re using Tableau Public, you can publish dashboards and share interactive links.
+
+---
+
+## 🛣️ Roadmap / Future Enhancements
+
+✅ Initial ETL pipeline
+✅ Tableau dashboard integration
+🔲 Automated unit tests for data validation
+🔲 Enhanced dashboard with predictive metrics
+🔲 CI/CD for automated deployments
+🔲 Cloud deployment support (AWS/GCP/Azure)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+---
+## 👩‍💻 Author
+
+**Aakanksha Sonawane
+M.S. in Information Systems | Data Engineer & Analyst GitHub Profile**
